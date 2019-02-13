@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Employee details</title>
+</head>
+<body>
+<p>Employee Tables</p>
+<button onclick="myFunction()">Try it</button>
+<p id="text"></p>
+
+<script>
+  function myFunction() {
+var employees = [
+    { name: "Rahul", age: 22, salary: 6000, dob: "23-07-1996" },
+    { name: "Rohit", age: 24, salary: 900, dob: "23-07-1994" },
+    { name: "Nisha", age: 26, salary: 7000, dob: "28-06-1992" },
+    { name: "Nishant", age: 22, salary: 900, dob: "23-06-1996" },
+    { name: "Sahil", age: 27, salary: 6000, dob: "23-07-1991" }
+];
+
+var employee1 = employees.filter(function(employee) {
+    return employee.salary > 5000;
+}) 
+
+
+var employee2 = employees.filter(function(employee) {
+    return employee.salary < 1000 && employee.age > 20;
+})
+
+
+console.log(employees[0].name);
+console.log(employee1[0].name);
+console.log(employee2[0].name);
+}
+</script>
+
+</body>
+</html>
